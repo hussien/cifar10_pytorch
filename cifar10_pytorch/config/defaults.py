@@ -6,8 +6,8 @@ _C = CN()
 
 _C.MODEL = CN()
 _C.MODEL.NAME = ""
-# _C.MODEL.DEVICE = "cuda"
-_C.MODEL.DEVICE = "cpu"
+_C.MODEL.DEVICE = "cuda"
+# _C.MODEL.DEVICE = "cpu"
 _C.MODEL.PRETRAINED = ""
 
 # EfficientNet Parameters
