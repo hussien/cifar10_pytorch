@@ -18,6 +18,7 @@ def train(model, device, dataloader, criterion, optimizer, epoch):
     train_loss = 0
     correct = 0
     total = 0
+    print("\ntrain set size=",len(dataloader)," batch size=",dataloader.batch_size)
     for batch_i, (inputs, targets) in enumerate(dataloader):
         inputs, targets = inputs.to(device), targets.to(device)
         optimizer.zero_grad()
@@ -58,6 +59,7 @@ def test(model, device, dataloader, criterion, epoch):
     test_loss = 0
     correct = 0
     total = 0
+    print("\ntest set size=",len(dataloader)," batch size=",dataloader.batch_size)
     with torch.no_grad():
         for batch_i, (inputs, targets) in enumerate(dataloader):
             inputs, targets = inputs.to(device), targets.to(device)
