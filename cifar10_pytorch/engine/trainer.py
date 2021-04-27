@@ -32,7 +32,7 @@ def train(model, device, dataloader, criterion, optimizer, epoch):
         correct += predicted.eq(targets).sum().item()
 
         if batch_i > 0 and (batch_i + 1) % 100 == 0:
-            print("epoch {}, iter {} / {}, Loss: {:.3f} | Acc: {:.3f}".format(
+            print("train-> epoch {}, iter {} / {}, Loss: {:.3f} | Acc: {:.3f}".format(
                 epoch+1,
                 batch_i+1,
                 len(dataloader),
@@ -68,7 +68,7 @@ def test(model, device, dataloader, criterion, epoch):
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
             if batch_i > 0 and (batch_i + 1) % 100 == 0:
-                print("epoch {}, iter {} / {}, Loss: {:.3f} | Acc: {:.3f}".format(
+                print("test-> epoch {}, iter {} / {}, Loss: {:.3f} | Acc: {:.3f}".format(
                     epoch+1,
                     batch_i+1,
                     len(dataloader),
