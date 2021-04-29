@@ -79,4 +79,4 @@ def test(model, device, dataloader, criterion, epoch):
                 ))
     acc = 100.*correct/total
     print("Accuracy: {:.4f}".format(acc))
-    return acc
+    return test_loss/(batch_i+1),acc
